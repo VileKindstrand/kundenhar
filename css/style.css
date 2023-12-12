@@ -5,33 +5,54 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 90vh;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(255, 255, 255) 30%, cornsilk 90%);
+  overflow-y: hidden;
+  background-image: url(/img/cloth_pic.avif);
+  background: linear-gradient(to bottom, white 30%, cornsilk 90%);
   grid-template-areas:
-    'as as hd hd hd nv nv'
+    'nv nv nv nv nv nv nv'
     'mn mn mn mn mn mn mn'
-    'img img2 img3 img4 img5 img6 img7'
+    'img1 img2 img3 img4 img5 img6 img7'
   ;
 
 }
 
-p,
-h1 {
+p, a, h1, li, ul, ol{
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+p {
   color: rgba(231, 76, 60);
   font-weight: 550;
-  font-family: sans-serif;
+
 
 }
 
 a {
   color: black;
   text-decoration-line: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 100px;
+  font-weight: 100;
+  margin: 15px;
 
 }
 
-#login {
+h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+.title{
+  transform: translateY(100px);
+}
 
+#red{
+  color: rgb(231, 76, 60);
+}
+
+#login {
+  font-weight: 550;
   background-color: rgb(241, 241, 241);
 
 }
@@ -40,45 +61,52 @@ a {
 
   background-color: rgba(231, 76, 60);
   color: whitesmoke;
+  font-weight: 550;
 
 }
 
 body {
   background: linear-gradient(to bottom, rgba(231, 76, 60) 10%, rgb(117, 22, 12) 70%);
   margin: 0;
+  
+
 }
 
 header {
   padding: 0px;
   grid-area: hd;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
   text-align: center;
+
 
 
 }
 
 nav {
   grid-area: nv;
-  border-radius: 0px 0px 0px 10px;
   padding: 20px;
-  border-radius: 0px 0px 10px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
   text-align: right;
+
 }
 
 aside {
   grid-area: as;
   border-radius: 0px 0px 0px 10px;
   background-color: rgb(255, 255, 255);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
+
 }
 
 main {
@@ -86,7 +114,22 @@ main {
   grid-area: mn;
   border-radius: 10px;
   text-align: center;
+  margin: 0px;
+  object-position: center;
+  border-radius: 15px;
 
+}
+
+main:after {
+  content: "";
+  position: absolute;
+  top: 525px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(255, 255, 255, 1) 100%);
+  height: 20%;
+  z-index: 1;
 }
 
 footer {
@@ -115,12 +158,11 @@ section {
   height: 100vh;
   background-color: cornsilk;
   display: grid;
-  grid-template-rows: 12vh 40% 35% 25%;
+  grid-template-rows: 40% 35% 25%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 100vh;
   width: 100%;
   grid-template-areas:
-    'as2 hd2 hd2 nv2'
     'mn2 mn2 mn2 mn2'
     'mn2 mn2 mn2 mn2'
     'ft2 ft2 ft2 ft2'
@@ -133,6 +175,8 @@ section {
   padding: 10px;
   grid-area: hd2;
   background-color: white;
+  z-index: 1;
+
 
 }
 
@@ -142,6 +186,8 @@ section {
   padding: 10px;
   border-radius: 0px 0px 10px 0px;
   background-color: white;
+  z-index: 1;
+
 
 }
 
@@ -149,6 +195,9 @@ section {
   grid-area: as2;
   border-radius: 0px 0px 0px 10px;
   background-color: rgb(255, 255, 255);
+  z-index: 1;
+  
+
 
 }
 
@@ -156,10 +205,13 @@ section {
   padding: 10px;
   grid-area: mn2;
   border-radius: 10px;
+  z-index: 1;
 
 
 
 }
+
+
 
 #footer2 {
   padding: 10px;
@@ -177,72 +229,61 @@ section {
 
 }
 
-.img {
-  margin: 7px;
-  grid-area: img;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-
-}
-
-.img:after {
-  content: "";
-  position: absolute;
-  top: 570px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.6) 150%);
-  height: 15%;
-}
 
 
 
-#img {
-  grid-area: img;
-  background-image: url(/img/94311bb5184bf722f9caa84dfdbde2fc.jpg);
+
+#img1 {
+  grid-area: img1;
+  transform: translateY(0px);
 
 }
 
 #img2 {
   grid-area: img2;
-  background-image: url(/img/b4db2dbb0b7a3a48d77137bcdafd5c92.jpg);
+  transform: translateY(200px);
 
 }
 
 #img3 {
   grid-area: img3;
-  background-image: url(/img/depositphotos_127469034-stock-photo-beautiful-woman-in-fashionable-clothing.jpg);
-
+  transform: translateY(280px);
 }
 
 #img4 {
   grid-area: img4;
-  background-image: url(/img/f87553b299c71ce42aecd800f1cd7ca4.jpg);
+  transform: translateY(320px);
 
 }
 
 #img5 {
   grid-area: img5;
-  background-image: url(/img/images.jpg);
+  transform: translateY(280px);
 
 }
 
 #img6 {
   grid-area: img6;
-  background-image: url(/img/nedladdning.jpg);
+  transform: translateY(200px);
 
 }
 
 #img7 {
   grid-area: img7;
-  background-image: url(/img/pinterest-autumn-outfits-282712-1569356045601-promo.700x0c.jpg);
+  transform: translateY(0px);
 
 }
 
+img {
 
+  height: 300px;
+  width: 205px;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+
+
+}
 
 
 
@@ -252,9 +293,10 @@ section {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 300vh;
   width: 100%;
+  z-index: 1;
   background: linear-gradient(to bottom, rgb(255, 255, 255) 30%, cornsilk 90%);
   grid-template-areas:
-    'as as hd hd hd nv nv'
+    'as as hd hd nv nv nv'
     'mw mw mw mw mw mw mw'
     'rw1 rw1 rw1 rw1 rw1 rw1 rw1'
     'rw2 rw2 rw2 rw2 rw2 rw2 rw2'
