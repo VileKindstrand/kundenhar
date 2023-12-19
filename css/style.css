@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 #wrapper {
 
   display: grid;
@@ -7,7 +11,7 @@
   width: 100%;
   overflow-y: hidden;
   background-image: url(/img/cloth_pic.avif);
-  background: linear-gradient(to bottom, white 30%, cornsilk 90%);
+  background: linear-gradient(to bottom, white 30%, #fff8dc 90%);
   grid-template-areas:
     'nv nv nv nv nv nv nv'
     'mn mn mn mn mn mn mn'
@@ -23,7 +27,7 @@ p, a, h1, li, ul, ol{
 }
 
 p {
-  color: rgba(231, 76, 60);
+  color: #e74c3c;
   font-weight: 550;
 
 
@@ -66,7 +70,7 @@ h1 {
 }
 
 body {
-  background: linear-gradient(to bottom, rgba(231, 76, 60) 10%, rgb(117, 22, 12) 70%);
+  background: linear-gradient(to bottom, #e74c3c 10%, rgb(117, 22, 12) 70%);
   margin: 0;
   
 
@@ -87,7 +91,7 @@ header {
 
 nav {
   grid-area: nv;
-  padding: 20px;
+  padding: 0px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 0px 0px 20px 20px;
@@ -95,7 +99,12 @@ nav {
   position: fixed;
   top: 0;
   z-index: 3;
-  text-align: right;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 
 }
 
@@ -152,17 +161,24 @@ ul {
 
 }
 
+.text_box{
 
-section {
+  background-color: #e74c3c;
+  color: black;
+
+}
+
+#section2 {
 
   height: 100vh;
   background-color: cornsilk;
   display: grid;
-  grid-template-rows: 40% 35% 25%;
+  grid-template-rows: 112.5px 40fr 35fr 25fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 100vh;
   width: 100%;
   grid-template-areas:
+    'nv2 nv2 nv2 nv2'
     'mn2 mn2 mn2 mn2'
     'mn2 mn2 mn2 mn2'
     'ft2 ft2 ft2 ft2'
@@ -171,13 +187,12 @@ section {
 
 }
 
+
 #header2 {
   padding: 10px;
   grid-area: hd2;
   background-color: white;
   z-index: 1;
-
-
 }
 
 #nav2 {
@@ -205,9 +220,7 @@ section {
   padding: 10px;
   grid-area: mn2;
   border-radius: 10px;
-  z-index: 1;
-
-
+  display: flex;
 
 }
 
@@ -222,9 +235,8 @@ section {
 #nav2 {
 
   grid-area: nv2;
-  border-radius: 0px 0px 0px 10px;
   padding: 10px;
-  border-radius: 0px 0px 10px 0px;
+  border-radius: 0px 0px 20px 20px;
   background-color: white;
 
 }
@@ -294,7 +306,7 @@ img {
   height: 300vh;
   width: 100%;
   z-index: 1;
-  background: linear-gradient(to bottom, rgb(255, 255, 255) 30%, cornsilk 90%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 30%, #fff8db 90%);
   grid-template-areas:
     'as as hd hd nv nv nv'
     'mw mw mw mw mw mw mw'
@@ -345,5 +357,21 @@ img {
   background-image: url(/img/pinterest-autumn-outfits-282712-1569356045601-promo.700x0c.jpg);
   background-position: center;
   background-size: contain;
+
+}
+
+#header_logo{
+  object-fit: cover;
+  object-position: 30% 50%;
+  height: 12vh;
+  width: auto;
+
+}
+
+#big_blob{
+
+  height: 500px;
+  width: auto;
+  transform: translateX(80px);
 
 }
